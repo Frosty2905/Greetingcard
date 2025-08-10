@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy 1 Month 💫</title>
+<style>
+  :root{
+    --bg1:#0f1724;
+    --bg2:#2b2f63;
+    --card:#fff8ff;
+    --accent:#ff6b9f;
+    --accent2:#ffd166;
+    --glass: rgba(255,255,255,0.06);
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(255,150,190,0.07), transparent),
+                radial-gradient(1000px 500px at 90% 90%, rgba(255,215,130,0.03), transparent),
+                linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+    box-sizing:border-box;
+  }
+
+  /* Card */
+  .card{
+    width:min(820px, 95vw);
+    max-width:900px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border-radius:22px;
+    padding:28px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.04);
+  }
+
+  .top-strip{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+  }
+
+  .content{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns: 1fr 380px;
+    gap:20px;
+    align-items:center;
+  }
+
+  @media (max-width:840px){
+    .content{ grid-template-columns: 1fr; }
+  }
+
+  .message{
+    padding:18px 22px;
+  }
+
+  .title{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:0.2px;
+    margin:0 0 8px 0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .subtitle{
+    color:rgba(255,255,255,0.85);
+    margin:0 0 18px 0;
+    font-weight:600;
+  }
+
+  .paragraph{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:18px;
+    border-radius:12px;
+    line-height:1.5;
+    color:rgba(255,255,255,0.95);
+    font-size:15.5px;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+  }
+
+  .paragraph strong{ color:var(--accent); }
+
+  .ending{
+    margin-top:14px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+
+  .ending .small{
+    font-size:13px;
+    color:rgba(255,255,255,0.85);
+  }
+
+  .illustration{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:18px;
+  }
+
+  .teddy{
+    width:170px;
+    height:170px;
+    border-radius:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:72px;
+    background: linear-gradient(180deg,#fffaf6,#fff0f8);
+    color:#6b2d3b;
+    box-shadow: 0 10px 30px rgba(107,45,59,0.18), inset 0 -6px 12px rgba(0,0,0,0.03);
+    transform-origin:center;
+    animation: bounce 2.8s ease-in-out infinite;
+    border:1px solid rgba(255,255,255,0.5);
+  }
+
+  @keyframes bounce{
+    0%{ transform: translateY(0) rotate(-2deg) scale(1); }
+    25%{ transform: translateY(-12px) rotate(2deg) scale(1.02); }
+    50%{ transform: translateY(0) rotate(-1deg) scale(1); }
+    75%{ transform: translateY(-8px) rotate(1deg) scale(1.01); }
+    100%{ transform: translateY(0) rotate(-2deg) scale(1); }
+  }
+
+  .card-badge{
+    margin-top:8px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:12px;
+    background: linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .floating{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    overflow:hidden;
+  }
+
+  .floating i{
+    position:absolute;
+    font-style:normal;
+    will-change: transform, opacity;
+    opacity:0;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+  }
+
+  .heart{
+    font-size:20px;
+    color:var(--accent);
+    text-shadow: 0 2px 6px rgba(255,107,159,0.15);
+    animation: floatUp linear infinite;
+  }
+  .heart.alt{ color:#ff9bb5; font-size:28px; }
+  .star{
+    font-size:16px;
+    color:var(--accent2);
+    text-shadow: 0 2px 8px rgba(255,209,102,0.08);
+    animation: twinkle linear infinite;
+  }
+
+  @keyframes floatUp{
+    0%{ transform: translateY(40vh) translateX(0) scale(.9); opacity:0; }
+    5%{ opacity:1; }
+    50%{ opacity:0.95; }
+    100%{ transform: translateY(-20vh) translateX(60px) scale(1.08); opacity:0; }
+  }
+
+  @keyframes twinkle{
+    0%{ transform: translateY(30vh) rotate(0deg) scale(.8); opacity:0; filter:blur(0.2px); }
+    10%{ opacity:1; }
+    50%{ transform: translateY(0vh) rotate(180deg) scale(1.15); opacity:0.9; filter:blur(0); }
+    100%{ transform: translateY(-30vh) rotate(360deg) scale(0.7); opacity:0; }
+  }
+
+  .h1{ left:8%; animation-duration:9s; animation-delay:0.3s; }
+  .h2{ left:22%; animation-duration:7.5s; animation-delay:1.4s; opacity:0.9; }
+  .h3{ left:44%; animation-duration:10s; animation-delay:0.6s; }
+  .h4{ left:62%; animation-duration:8.2s; animation-delay:0.9s; }
+  .h5{ left:78%; animation-duration:11s; animation-delay:0.2s; }
+
+  .s1{ left:14%; animation-duration:6s; animation-delay:0.1s; }
+  .s2{ left:33%; animation-duration:8s; animation-delay:0.9s; }
+  .s3{ left:51%; animation-duration:5.5s; animation-delay:0.5s; }
+  .s4{ left:70%; animation-duration:7.8s; animation-delay:1.2s; }
+  .s5{ left:88%; animation-duration:9.2s; animation-delay:0.4s; }
+
+  .glow{
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    right:-80px;
+    top:-120px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,150,190,0.12), transparent 30%);
+    filter: blur(20px);
+    z-index:0;
+    pointer-events:none;
+  }
+
+  .footer{
+    margin-top:14px;
+    font-size:13px;
+    color:rgba(255,255,255,0.72);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .teddy, .floating i{ animation: none; transform:none !important; opacity:1 !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="card" role="article" aria-label="One month anniversary card">
+    <div class="top-strip" aria-hidden="true">
+      <svg width="100%" height="60" viewBox="0 0 100 20" preserveAspectRatio="none" style="display:block;opacity:0.06;">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#ff6b9f"/>
+          </linearGradient>
+        </defs>
+        <rect width="100" height="20" fill="url(#g)"></rect>
+      </svg>
+    </div>
+
+    <div class="floating" aria-hidden="true">
+      <i class="heart h1">❤️</i>
+      <i class="heart alt h2">💗</i>
+      <i class="heart h3">💓</i>
+      <i class="heart alt h4">💕</i>
+      <i class="heart h5">💖</i>
+
+      <i class="star s1">✨</i>
+      <i class="star s2">✨</i>
+      <i class="star s3">🌟</i>
+      <i class="star s4">✨</i>
+      <i class="star s5">🌟</i>
+    </div>
+
+    <div class="glow" aria-hidden="true"></div>
+
+    <div class="content">
+      <div class="message">
+        <h1 class="title">Happy 1 Month ✨ <span style="font-size:14px;color:rgba(255,255,255,0.85);font-weight:600">— one beautiful chapter</span></h1>
+        <p class="subtitle">A small card for a huge feeling.</p>
+
+        <div class="paragraph" id="messageText">
+          <p>Happy 1 month, my lil cutu princess ❤️. It’s crazy how in such a short time, you’ve become such a big part of my heart. These 30 days with you have been filled with laughter, late-night talks, sweet little moments, and a kind of happiness I didn’t even know I was missing. You’re my favorite notification, my happiest thought, and my sweetest addiction. I love the way you care for me, the way you make me smile without even trying, and how you somehow make everything better just by being you. One month down… now get ready, because I’m planning to keep you forever 💕</p>
+
+          <div class="ending">
+            <div class="small">With all my love, now and always 💫</div>
+          </div>
+        </div>
+
+        <div class="footer" aria-hidden="true">Made with extra love 🧸✨</div>
+      </div>
+
+      <div class="illustration" aria-hidden="false">
+        <div class="teddy" role="img" aria-label="Bouncing teddy bear">🧸</div>
+        <div style="text-align:center;">
+          <div class="card-badge">One month • A beginning of forever</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const floats = document.querySelectorAll('.floating i');
+      floats.forEach((el) => {
+        const xJitter = (Math.random() * 40) - 20;
+        el.style.transform = `translateX(${xJitter}px)`;
+        const scale = 0.9 + Math.random() * 0.35;
+        el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) * scale) + 'px';
+      });
+
+      const card = document.querySelector('.card');
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(6px) scale(.998)';
+      setTimeout(() => {
+        card.style.transition = 'opacity 600ms ease, transform 600ms cubic-bezier(.2,.9,.3,1)';
+        card.style.opacity = 1;
+        card.style.transform = 'translateY(0) scale(1)';
+      }, 80);
+    })();
+  </script>
+</body>
+</html>
+p
