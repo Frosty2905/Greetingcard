@@ -3,112 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 1 Month ❤️</title>
+<title>Happy 1 Month</title>
 <style>
     body {
-        margin: 0;
-        padding: 0;
-        background: #ffdde1;
-        background: linear-gradient(to right, #ee9ca7, #ffdde1);
-        font-family: 'Arial', sans-serif;
-        overflow: hidden;
-        text-align: center;
+        background-color: #1a1a1a;
         color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
     }
-
-    h1 {
-        font-size: 2.5rem;
+    .emoji {
+        font-size: 24px;
+    }
+    .heading {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .card {
+        background-color: #2a2a2a;
+        border-radius: 15px;
+        padding: 20px;
         margin-top: 30px;
-        animation: fadeIn 2s ease-in-out;
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin: 20px;
-        max-width: 600px;
+        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
-        animation: fadeIn 3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-    .heart {
-        position: absolute;
-        color: red;
-        animation: float 6s infinite ease-in;
-        font-size: 20px;
-    }
-
-    @keyframes float {
-        0% {transform: translateY(0) rotate(0);}
-        50% {transform: translateY(-100px) rotate(180deg);}
-        100% {transform: translateY(0) rotate(360deg);}
-    }
-
-    .star {
-        position: absolute;
-        color: gold;
-        animation: twinkle 2s infinite;
-        font-size: 15px;
-    }
-
-    @keyframes twinkle {
-        0%, 100% {opacity: 1;}
-        50% {opacity: 0.3;}
-    }
-
-    .teddy {
-        font-size: 4rem;
-        margin-top: 20px;
-        animation: fadeIn 4s ease-in-out;
+    .message {
+        font-size: 18px;
+        line-height: 1.5;
+        white-space: pre-wrap;
     }
 </style>
 </head>
 <body>
 
-<h1>Happy 1 Month ❤️</h1>
-<p>
-    Happy 1 month, my lil cutu princess ❤️. It’s crazy how in such a short time, you’ve become such a big part of my heart. 
-    These 30 days with you have been filled with laughter, late-night talks, sweet little moments, and a kind of happiness I didn’t even know I was missing. 
-    You’re my favorite notification, my happiest thought, and my sweetest addiction. 
-    I love the way you care for me, the way you make me smile without even trying, and how you somehow make everything better just by being you. 
-    One month down… now get ready, because I’m planning to keep you forever 💕
-</p>
+<div class="emoji">✨ 💖 💖</div>
+<div class="heading">A small card for a huge feeling.</div>
 
-<div class="teddy">🧸</div>
-
-<script>
-    function createHeart() {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * window.innerWidth + "px";
-        heart.style.top = Math.random() * window.innerHeight + "px";
-        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 6000);
-    }
-
-    function createStar() {
-        const star = document.createElement("div");
-        star.className = "star";
-        star.innerHTML = "✨";
-        star.style.left = Math.random() * window.innerWidth + "px";
-        star.style.top = Math.random() * window.innerHeight + "px";
-        star.style.fontSize = (Math.random() * 15 + 10) + "px";
-        document.body.appendChild(star);
-        setTimeout(() => star.remove(), 2000);
-    }
-
-    setInterval(createHeart, 500);
-    setInterval(createStar, 300);
-</script>
+<div class="card">
+    <div class="message">
+        Happy 1 month, my lil cutu princess ❤️. 
+        It’s crazy how in such a short time, you’ve become such a big part of my heart. 
+        These 30 days with you have been filled with laughter, late-night talks, sweet little moments, and a kind of happiness I didn’t even know I was missing.  
+        
+        You’re my favorite notification, my happiest thought, and my sweetest addiction.  
+        I love the way you care for me, the way you make me smile without even trying, and how you somehow make everything better just by being you.  
+        
+        One month down… now get ready, because I’m planning to keep you forever 💕
+    </div>
+</div>
 
 </body>
 </html>
-
-   
